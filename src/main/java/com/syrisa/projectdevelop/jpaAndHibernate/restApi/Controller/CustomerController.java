@@ -35,6 +35,11 @@ public class CustomerController {
     }
     @PostMapping("/customer/delete")
     public void delete(@RequestBody Customer customer){
+        //If  you  delete  customer, you can see 500 Internal Server Error.
+        //Because constraint fields have.
+        //Because of you could not customer.
+        //But you can add necessary fields to Customer Entity.
+        //And this problem will solve.
         this.customerService.delete(customer);
     }
     
