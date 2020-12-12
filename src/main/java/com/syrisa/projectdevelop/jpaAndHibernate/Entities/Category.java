@@ -11,7 +11,7 @@ public class Category implements IEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_id")
     private int categoryId;
-    @Column(name = "category_name")
+    @Column(name = "name")
     private String categoryName;
     public Category(){}
     public Category(int categoryId,String categoryName){
