@@ -27,21 +27,27 @@ public class HibernateActorDao implements IActorDao {
 
     @Override
     public Actor getById(int id) {
-        return null;
+        Session session=entityManager.unwrap(Session.class);
+        Actor actor=session.get(Actor.class,id);
+        return actor;
     }
 
     @Override
     public void add(Actor actor) {
-
+        Session session=entityManager.unwrap(Session.class);
+        session.saveOrUpdate(actor);
     }
 
     @Override
     public void update(Actor actor) {
-
+        Session session=entityManager.unwrap(Session.class);
+        session.saveOrUpdate(actor);
     }
 
     @Override
     public void delete(Actor actor) {
-
+        Session session=entityManager.unwrap(Session.class);
+        Actor actorToDelete=session.get(Actor.class,actor.getActorId());
+        session.delete(actorToDelete);
     }
 }
