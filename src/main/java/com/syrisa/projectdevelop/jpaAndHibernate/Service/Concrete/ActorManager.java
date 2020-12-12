@@ -25,7 +25,7 @@ public class ActorManager implements IActorService<Actor> {
     @Override
     @Transactional
     public Actor getById(int id) {
-        return this.actorDao.getById(id);
+        return (Actor) this.actorDao.getById(id);
     }
 
     @Override
