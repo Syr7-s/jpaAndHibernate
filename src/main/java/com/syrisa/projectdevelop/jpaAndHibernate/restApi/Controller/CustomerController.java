@@ -25,6 +25,8 @@ public class CustomerController {
     }
     @PostMapping("/customer/add")
     public void add(@RequestBody Customer customer){
+        //If  you  add new customer, you can see 500 Internal Server Error.
+        //Because stode_id does not map.
         this.customerService.add(customer);
     }
     @PostMapping("/customer/update")
