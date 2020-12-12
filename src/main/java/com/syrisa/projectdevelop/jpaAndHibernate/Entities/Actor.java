@@ -1,11 +1,13 @@
 package com.syrisa.projectdevelop.jpaAndHibernate.Entities;
 
+import com.syrisa.projectdevelop.jpaAndHibernate.Entities.Abstract.IEntity;
+
 import javax.persistence.*;
 
 
 @Entity
 @Table(name="actor")
-public class Actor {
+public class Actor implements IEntity {
     @Id
     @Column(name = "actor_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

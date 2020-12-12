@@ -1,10 +1,12 @@
 package com.syrisa.projectdevelop.jpaAndHibernate.Entities;
 
+import com.syrisa.projectdevelop.jpaAndHibernate.Entities.Abstract.IEntity;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="category")
-public class Category {
+public class Category implements IEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_id")
