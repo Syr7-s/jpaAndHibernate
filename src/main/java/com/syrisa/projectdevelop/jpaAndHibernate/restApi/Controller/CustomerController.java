@@ -31,7 +31,7 @@ public class CustomerController {
     public void update(@RequestBody Customer customer){
         this.customerService.update(customer);
     }
-    @GetMapping("/customer/delete")
+    @PostMapping("/customer/delete")
     public void delete(@RequestBody Customer customer){
         this.customerService.delete(customer);
     }
