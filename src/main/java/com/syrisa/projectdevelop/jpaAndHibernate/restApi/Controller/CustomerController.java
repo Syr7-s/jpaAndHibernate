@@ -27,4 +27,13 @@ public class CustomerController {
     public void add(@RequestBody Customer customer){
         this.customerService.add(customer);
     }
+    @PostMapping("/customer/update")
+    public void update(@RequestBody Customer customer){
+        this.customerService.update(customer);
+    }
+    @GetMapping("/customer/delete")
+    public void delete(@RequestBody Customer customer){
+        this.customerService.delete(customer);
+    }
+    
 }
