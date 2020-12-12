@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import java.util.List;
 @Repository
-public class HibernateActorDao implements IActorDao {
+public class HibernateActorDao implements IActorDao<Actor> {
     private EntityManager entityManager;
     @Autowired
     public HibernateActorDao(EntityManager entityManager){

@@ -4,10 +4,10 @@ import com.syrisa.projectdevelop.jpaAndHibernate.Entities.Actor;
 
 import java.util.List;
 
-public interface IActorDao {
-    List<Actor> getAll();
-    Actor getById(int id);
-    void add(Actor actor);
-    void update(Actor actor);
-    void delete(Actor actor);
+public interface IActorDao<T> {
+    List<T> getAll();
+    T getById(int id);
+    void add(T t);
+    void update(T t);
+    void delete(T t);
 }
